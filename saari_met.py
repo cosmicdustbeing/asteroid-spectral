@@ -79,7 +79,8 @@ def band_params(wavx, refly, xnew):
             np.min(np.where(BII_div < 1. - 0.5 * BIId, BII_wav, 99.))) / 2.
     BIIfwhm = (np.max(np.where(BII_div < 1. - 0.5 * BIId, BII_wav, 0)) - BIIm) * 2.
 
-    BAR = BIa/BIIa
+    # band are ratio
+    BAR = BIIa/BIa
     
     output = [xnew[BIb[0]], xnew[BIr[0]], BIc, BIm, BIs, BId, BIa, BIfwhm,
               xnew[BIIb[0]], xnew[BIIr[0]], BIIc, BIIm, BIIs, BIId, BIIa, BIIfwhm, BAR]
