@@ -47,7 +47,7 @@ def band_params(wavx, refly, xnew, wt):
     BI_div = ysmooth[BIb[0]:BIr[0]+1] / BI_cont
 
     # band I area
-    BIa = np.trapz(BI_div, BI_wav)
+    BIa = np.trapz(1.-BI_div, BI_wav)
 
     # band I center
     BIc = BI_wav[np.argmin(BI_div)]
@@ -72,7 +72,7 @@ def band_params(wavx, refly, xnew, wt):
     BII_wav = xnew[BIIb[0]:BIIr[0]+1]
     BII_cont = np.linspace(BIIb[1], BIIr[1], BIIr[0] - BIIb[0] + 1)
     BII_div = ysmooth[BIIb[0]:BIIr[0]+1] / BII_cont
-    BIIa = np.trapz(BII_div, BII_wav)
+    BIIa = np.trapz(1.-BII_div, BII_wav)
     BIIc = BII_wav[np.argmin(BII_div)]
     BIId = 1. - np.min(BII_div)
     BIIm = (np.max(np.where(BII_div < 1. - 0.5 * BIId, BII_wav, 0)) +
