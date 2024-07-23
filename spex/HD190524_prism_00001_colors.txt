@@ -1,0 +1,2 @@
+MJD,HourAngle,Azimuth,Elevation,Airmass,Temperature,Humidity,J_magnitude,H_magnitude,K_magnitude,J_H_color,H_K_color
+60472.4794034,'-01:37:32.42'       ,144.22,47.16,N/A,6.3,5.4,-1.0708145783534022,-1.5512854794041062,-2.0172092331897264,0.480470901050704,0.46592375378562023
